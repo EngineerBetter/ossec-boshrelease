@@ -1,0 +1,17 @@
+---
+name: forwarder
+packages:
+- java8
+- logstash
+templates:
+  bin/ctl: bin/ctl
+  bin/monit_debugger: bin/monit_debugger
+  config/logstash.conf: config/logstash.conf
+  data/properties.sh.erb: data/properties.sh
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+
+properties:
+  forwarder.elasticsearch_hosts:
+    description: The list of elasticsearch node IPs
+    default: [127.0.0.1]

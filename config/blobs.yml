@@ -1,1 +1,13 @@
---- {}
+---
+java8/openjdk-1.8.0_91.tar.gz:
+  object_id: f6307bb1-61a6-469e-b213-479e838a7739
+  sha: 47d80f031060012c8be907c0139091fe6b4e53f7
+  size: 78277858
+logstash/logstash-5.0.1.tar.gz:
+  object_id: 86203d59-0b82-4af0-a7c0-d9a3199d7277
+  sha: be33edf6d9d7c9607247310e13392a6bea21af8d
+  size: 104848557
+ossec/wazuh-1.1.1.tar.gz:
+  object_id: ebb40f1d-d09f-4804-9a1d-6e8adc7e9175
+  sha: b0d89958fa5377d06eee6edb9043a0814c71ff6c
+  size: 2991596
