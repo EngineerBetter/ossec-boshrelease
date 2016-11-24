@@ -1,7 +1,7 @@
 ---
 name: logstash
 dependencies:
-- java8
+- ossec-java8
 files:
 - logstash/logstash-5.0.1.tar.gz
 - logstash/elastic-ossec-template.json

@@ -1,7 +1,7 @@
 ---
 name: forwarder
 packages:
-- java8
+- ossec-java8
 - logstash
 templates:
   bin/ctl: bin/ctl

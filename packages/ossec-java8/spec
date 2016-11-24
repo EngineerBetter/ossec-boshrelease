@@ -1,4 +1,4 @@
 ---
-name: java8
+name: ossec-java8
 files:
 - java8/openjdk-1.8.0_91.tar.gz
