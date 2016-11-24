@@ -3,6 +3,7 @@ name: ossec-server
 packages:
 - ossec-server
 templates:
+  bin/pre-start: bin/pre-start
   bin/ossec-maild-ctl: bin/ossec-maild-ctl
   bin/ossec-authd-ctl: bin/ossec-authd-ctl
   bin/ossec-execd-ctl: bin/ossec-execd-ctl
