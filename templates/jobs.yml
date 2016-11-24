@@ -9,12 +9,16 @@ update:
   serial: true
 
 jobs:
-  - name: elasticsearch
+  - name: ossec-server
     templates:
     - name: elasticsearch
       release: logsearch
     - name: kibana
       release: logsearch
+    - name: ossec-server
+      release: ossec
+    - name: forwarder
+      release: ossec
     instances: 1
     persistent_disk: 8192
     resource_pool: small_z1
@@ -24,17 +28,6 @@ jobs:
         node:
           allow_data: true
           allow_master: true
-
-  - name: ossec-server
-    templates:
-    - name: ossec-server
-      release: ossec
-    - name: forwarder
-      release: ossec
-    instances: 1
-    persistent_disk: 2048
-    resource_pool: small_z1
-    networks: (( param "please set ossec-server networks" ))
 
   - name: ossec-agent
     templates:

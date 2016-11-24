@@ -12,11 +12,6 @@ update:
   update_watch_time: 1000-30000
 
 jobs:
-  - name: elasticsearch
-    networks:
-      - name: ossec1
-        static_ips: (( static_ips 2 ))
-
   - name: ossec-server
     networks:
       - name: ossec1
@@ -46,16 +41,16 @@ networks:
 
 properties:
   forwarder:
-    elasticsearch_hosts: (( grab jobs.elasticsearch.networks[0].static_ips ))
+    elasticsearch_hosts: (( grab jobs.ossec-server.networks[0].static_ips ))
   elasticsearch:
     cluster_name: ossec
     exec:
       environment:
         ES_HEAP_SIZE: 500000K
-    master_hosts: (( grab jobs.elasticsearch.networks[0].static_ips ))
+    master_hosts: (( grab jobs.ossec-server.networks[0].static_ips ))
   kibana:
     elasticsearch:
-      host: (( grab jobs.elasticsearch.networks[0].static_ips[0] ))
+      host: (( grab jobs.ossec-server.networks[0].static_ips[0] ))
       port: 9200
   ossec:
     agent:
