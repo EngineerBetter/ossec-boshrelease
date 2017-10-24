@@ -1,3 +1,4 @@
 [submodule "src/wazuh-ruleset"]
 	path = src/wazuh-ruleset
-	url = https://github.com/wazuh/wazuh-ruleset
+	url = https://github.com/wazuh/wazuh-ruleset.git
+	branch = master
