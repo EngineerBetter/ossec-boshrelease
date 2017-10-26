@@ -1,6 +1,5 @@
----
 blobstore:
-  provider: s3
+  provider: local
   options:
-    bucket_name: ossec-boshrelease
+    blobstore_path: /tmp/ossec-blobs
 final_name: ossec

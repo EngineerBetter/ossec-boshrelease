@@ -1,0 +1,43 @@
+name: ossec
+version: 0.1.1
+commit_hash: non-git
+uncommitted_changes: false
+jobs:
+- name: forwarder
+  version: 5808c6c6683d670c7390e8ba9640d426aeb4eedb
+  fingerprint: 5808c6c6683d670c7390e8ba9640d426aeb4eedb
+  sha1: 22ee7871f5fb6ae4bdc3c7025b791a2d561809db
+- name: ossec-agent
+  version: fba2359dabe9f8945367003765c173c891dd8bfd
+  fingerprint: fba2359dabe9f8945367003765c173c891dd8bfd
+  sha1: aaf4d6375cbc5a3fedd8a7de6375b4fb7cca9ed8
+- name: ossec-server
+  version: 4d117b2ed97eb13639623c9a9261d24c3736ebb9
+  fingerprint: 4d117b2ed97eb13639623c9a9261d24c3736ebb9
+  sha1: dfcb93576e82be26c04f36d158568aea11cb0ebb
+packages:
+- name: logstash
+  version: 854206e091efe08a0845596266dfd83b73a46e58
+  fingerprint: 854206e091efe08a0845596266dfd83b73a46e58
+  sha1: 2dc722331091570ebb50c343a9b6634dd0280bdc
+  dependencies:
+  - ossec-java8
+- name: ossec-agent
+  version: 3203326cf91c87b5ab1d351685898012dc087f63
+  fingerprint: 3203326cf91c87b5ab1d351685898012dc087f63
+  sha1: d4639720102a4e51132e1e30e01c6d8b0af5d726
+  dependencies: []
+- name: ossec-java8
+  version: 73b614e79d8dc91ab1e2009d5f1605dce576d14d
+  fingerprint: 73b614e79d8dc91ab1e2009d5f1605dce576d14d
+  sha1: d985d6b42373d901430643943ca695149937b378
+  dependencies: []
+- name: ossec-server
+  version: 07884491a1245811663d6aaf31dd818683e82130
+  fingerprint: 07884491a1245811663d6aaf31dd818683e82130
+  sha1: eb368e2e3ded9c86db192382ea30876228f460b3
+  dependencies: []
+license:
+  version: 05676098ab866f487cd999595307d706f3b574f6
+  fingerprint: 05676098ab866f487cd999595307d706f3b574f6
+  sha1: 3e6bbd5df7507d4339bd48bf054105f43c973e87
