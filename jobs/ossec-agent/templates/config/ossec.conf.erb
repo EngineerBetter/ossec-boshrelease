@@ -21,7 +21,12 @@
     <ignore>/etc/random.seed</ignore>
     <ignore>/etc/adjtime</ignore>
     <ignore>/etc/httpd/logs</ignore>
-    <ignore>/var/vcap/bosh/logs</ignore>
+
+    <!-- On Diego,  /proc is mounted into privileged containers.
+    This contains the kcore file which is a virtual file representing the entire virtual address space of the OS (128TB).
+    This keeps OSSEC REALLY BUSY, makes the system tests time out. Things only get worse when clamav decides it's time to scan the filesystem for a whole bunch of Windows viruses
+     -->
+    <ignore>/var/vcap/data/garden/graph/aufs</ignore>
 
     <!-- Check the file, but never compute the diff -->
     <nodiff>/etc/ssl/private.key</nodiff>
